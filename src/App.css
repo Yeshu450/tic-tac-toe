@@ -1,0 +1,131 @@
+#header {
+	display: flex;
+	flex-wrap: wrap;
+	color: #ffffff;
+	/* background-color: rgba(255, 255, 255, 0.5); */
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	letter-spacing: 4px;
+	padding: 30px 0px;
+	column-gap: 20px;
+	/* color: #ffe082;*/
+	background-color: rgba(0, 0, 0, 0.7); /* semi-transparent black */
+}
+
+#header h1 {
+	font-size: 36px;
+}
+
+#footer {
+	display: flex;
+	flex-wrap: wrap;
+	color: #ffffff;
+	background: linear-gradient(to right, #0f1a40, #8c1a1a);
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	letter-spacing: 2px;
+	padding: 15px 0px;
+	column-gap: 10px;
+}
+
+#container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 40px 0px;
+	row-gap: 25px;
+}
+
+#board {
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	justify-content: space-around;
+	align-items: center;
+	width: 325px;
+	height: 325px;
+	padding: 5px;
+	background-color: rgba(255, 255, 0, 0.8);
+	box-shadow: 0px 0px 50px rgb(0, 0, 0);
+}
+
+.cell {
+	width: 100px;
+	height: 100px;
+	background-color: #ffffff;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 32px;
+}
+
+#btn {
+	padding: 15px 30px;
+	cursor: pointer;
+	border: none;
+	color: #ffffff;
+	background-color: #007bff;
+	border-radius: 8px;
+	font-weight: bold;
+	font-size: 20px;
+	box-shadow: 0 6px #0056d2;
+	transition: all 0.2s ease-in-out;
+}
+#btn:active {
+	background-color: #007bff;
+	transform: translateY(4px);
+	box-shadow: 0 2px #0056d2;
+}
+
+#result {
+	color: #ffffff;
+	font-size: 30px;
+	letter-spacing: 2px;
+}
+
+@keyframes blink {
+	0% {
+		background-color: yellow;
+	}
+	50% {
+		background-color: orange;
+	}
+	100% {
+		background-color: yellow;
+	}
+}
+
+@keyframes burst {
+	0% {
+		transform: scale(1);
+		background-color: #00fff7;
+		box-shadow: 0 0 10px #ffff00;
+	}
+	50% {
+		transform: scale(1.02);
+		background-color: #e0f7fa;
+		box-shadow: 0 0 20px #00e5ff;
+	}
+	100% {
+		transform: scale(1);
+		background-color: #ff004c;
+		box-shadow: 0 0 10px #ff1744;
+	}
+}
+
+.winner {
+	width: 100px;
+	height: 100px;
+	background-color: #ffffff;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 32px;
+	animation: burst 1s ease-in-out infinite;
+}
